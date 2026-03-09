@@ -23,11 +23,14 @@ If you are interested, there is also a YouTube walkthrough of the puzzles by the
 
 ## Start
 
-To start, sync the project environment with `uv sync`, then open `src/puzzles.ipynb` after you have read the Rules and Notes sections below and start coding.
+This repo now uses `uv` for dependency management
+
+To get started, sync the project environment with `uv sync --dev`, then open `src/puzzles.ipynb` after you have read the Rules and Notes sections below.
 
 Common commands:
 
-- `uv sync`
+- `uv sync --dev`
+- `uv run python src/lib.py`
 - `uv run python -c "from src.lib import TinyType; print(TinyType)"`
 - `uv run ruff check src`
 
@@ -51,6 +54,14 @@ You can inspect and import code from `src/solutions.py` to compare against your 
        "Use this function to replace an if-statement."
        return q * a + q.logical_not() * b
    ```
+
+   > David's comment
+> ```python
+> if q:
+>     return a
+> else:
+>     return b
+> ```
 
 ## Notes
 

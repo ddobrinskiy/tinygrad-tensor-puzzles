@@ -242,7 +242,7 @@ def make_test(
   return test_problem
 
 
-def run_test(fn):
+def run_test(fn, show_gif=False):
   fn()
   # Generate a random puppy video if you are correct.
   print("Correct!")
@@ -291,14 +291,15 @@ def run_test(fn):
     "eyxH0Wc",
     "rJEkEw4",
   ]
-  return HTML(
-    """
-    <video alt="test" controls autoplay=1>
-        <source src="https://openpuppies.com/mp4/%s.mp4"  type="video/mp4">
-    </video>
-    """
-    % (random.sample(pups, 1)[0])
-  )
+  if show_gif:
+    return HTML(
+      """
+      <video alt="test" controls autoplay=1>
+          <source src="https://openpuppies.com/mp4/%s.mp4"  type="video/mp4">
+      </video>
+      """
+      % (random.sample(pups, 1)[0])
+    )
 
 
 __all__ = ["draw_examples", "make_test", "run_test", "TinyType"]
