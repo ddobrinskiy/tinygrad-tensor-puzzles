@@ -23,7 +23,13 @@ If you are interested, there is also a YouTube walkthrough of the puzzles by the
 
 ## Start
 
-To start, install the dependencies using pipenv with `pipenv install` or using pip with `pip install -r requirements.txt`. Then head to `src/puzzles.ipynb` after you have read the Rules and Notes sections below and start coding!
+To start, sync the project environment with `uv sync`, then open `src/puzzles.ipynb` after you have read the Rules and Notes sections below and start coding.
+
+Common commands:
+
+- `uv sync`
+- `uv run python -c "from src.lib import TinyType; print(TinyType)"`
+- `uv run ruff check src`
 
 You can inspect and import code from `src/solutions.py` to compare against your own solutions.
 

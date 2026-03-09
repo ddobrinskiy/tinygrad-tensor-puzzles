@@ -1,3 +1,22 @@
+[project]
+name = "tinygrad-tensor-puzzles"
+version = "0.1.0"
+description = "Tensor puzzles implemented with tinygrad."
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "chalk-diagrams",
+  "hypothesis",
+  "ipykernel",
+  "numpy",
+  "tinygrad",
+]
+
+[dependency-groups]
+dev = [
+  "ruff",
+]
+
 [tool.ruff]
 include = ["./src/*"]
 line-length = 88
