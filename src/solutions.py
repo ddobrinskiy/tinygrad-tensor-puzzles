@@ -28,7 +28,7 @@ def ones(i: int) -> TT[["i"]]:
 
 
 def sum(a: TT[["i"]]) -> TT[[1]]:
-  # `[:, None]` is necessary to keep the shape of the output tensor.
+# `[:, None]` is necessary to keep the shape of the output tensor.
   return a @ ones(a.shape[0])[:, None]
 
 
